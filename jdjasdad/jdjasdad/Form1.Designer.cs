@@ -81,6 +81,7 @@
             this.usu.PasswordChar = '*';
             this.usu.Size = new System.Drawing.Size(320, 20);
             this.usu.TabIndex = 4;
+            this.usu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usu_KeyPress);
             // 
             // entrar
             // 

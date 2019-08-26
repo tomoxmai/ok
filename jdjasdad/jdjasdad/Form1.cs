@@ -28,6 +28,10 @@ namespace jdjasdad
 
             {
                 MessageBox.Show("jasdjd");
+                this.Hide();//escondemos ventana login
+                Curso_programacion CursosVentana = new Curso_programacion();
+                CursosVentana.Show();
+                this.Visible = false;
             }
             else
             {
@@ -35,6 +39,29 @@ namespace jdjasdad
                 box.Text = "";
                 usu.Text = "";
                 box.Focus();
+            }
+        }
+
+        private void Usu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if((int)e.KeyChar==(int)Keys.Enter)
+            {
+                if (box.Text == "juancho" && usu.Text == "123tamarindo")
+
+                {
+                    MessageBox.Show("jasdjd");
+                    this.Hide();//escondemos ventana login
+                    Curso_programacion CursosVentana = new Curso_programacion();
+                    CursosVentana.Show();
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña no valido");
+                    box.Text = "";
+                    usu.Text = "";
+                    box.Focus();
+                }
             }
         }
     }
